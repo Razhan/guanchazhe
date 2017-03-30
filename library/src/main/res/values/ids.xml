@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="toolbar" type="id" />
+    <item name="toolbar_title" type="id" />
+
+    <item name="double_confirm" type="string" />
+    <item name="exception_message" type="string" />
+
+    <item name="colorPrimary" type="color" />
+    <item name="grey" type="color" />
+
+    <item name="content_view" type="id" />
+    <item name="error_view" type="id" />
+    <item name="loading_view" type="id" />
+    <item name="refresh" type="id" />
+
+</resources>
