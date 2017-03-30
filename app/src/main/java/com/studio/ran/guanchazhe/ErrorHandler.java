@@ -12,11 +12,8 @@ public final class ErrorHandler implements IErrorHandler {
     private static final String DEFAULT_ERROR = "An error has occurred";
     private static final String DEFAULT_NET_ERROR = "Please check your network";
 
-    private final Gson gson;
-
     @Inject
     ErrorHandler() {
-        this.gson = new Gson();
     }
 
     @Override

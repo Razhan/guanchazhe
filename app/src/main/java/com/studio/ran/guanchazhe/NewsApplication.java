@@ -22,24 +22,26 @@ public final class NewsApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
+        initializeInjector();
         Prefs.init(this);
 
         Realm.init(this);
-        RealmConfiguration config = new RealmConfiguration.Builder().build();
-        Realm.setDefaultConfiguration(config);
+//        RealmConfiguration config = new RealmConfiguration.Builder().build();
+//        Realm.setDefaultConfiguration(config);
 
-        Stetho.initialize(
-                Stetho.newInitializerBuilder(this)
-                        .enableDumpapp(Stetho.defaultDumperPluginsProvider(this))
-                        .enableWebKitInspector(RealmInspectorModulesProvider.builder(this).build())
-                        .build());
+        if (BuildConfig.DEBUG) {
+            Stetho.initialize(
+                    Stetho.newInitializerBuilder(this)
+                            .enableDumpapp(Stetho.defaultDumperPluginsProvider(this))
+                            .enableWebKitInspector(RealmInspectorModulesProvider.builder(this).build())
+                            .build());
 
-        CrashWoodpecker.instance()
-                .setPatchMode(PatchMode.SHOW_LOG_PAGE)
-                .setPassToOriginalDefaultHandler(true)
-                .flyTo(this);
+            CrashWoodpecker.instance()
+                    .setPatchMode(PatchMode.SHOW_LOG_PAGE)
+                    .setPassToOriginalDefaultHandler(true)
+                    .flyTo(this);
+        }
 
-        this.initializeInjector();
     }
 
     private void initializeInjector() {

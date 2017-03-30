@@ -1,9 +1,9 @@
-package com.studio.ran.guanchazhe.adapter;
+package com.studio.ran.guanchazhe.base;
 
-import com.alp.library.base.ui.BaseMVPLoadFragment;
-import com.alp.library.presenter.BaseLoadPresenter;
+import com.alp.library.base.ui.BaseMVPRefreshLoadFragment;
+import com.alp.library.presenter.BaseRefreshLoadPresenter;
 
-public abstract class LazyFragment<T, P extends BaseLoadPresenter> extends BaseMVPLoadFragment<T, P> {
+public abstract class LazyRefreshLoadFragment<T, P extends BaseRefreshLoadPresenter> extends BaseMVPRefreshLoadFragment<T, P> {
 
     private boolean isVisible = false;
     private boolean isFirstLoad = true;
