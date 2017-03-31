@@ -5,4 +5,7 @@
 
     <dimen name="card_view_elevation_small">0dp</dimen>
     <dimen name="card_view_elevation_normal">0dp</dimen>
+
+    <dimen name="search_view_text_padding">65dp</dimen>
+
 </resources>

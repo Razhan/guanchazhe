@@ -2,5 +2,6 @@
 
     <string name="app_name">观察者</string>
     <string name="double_confirm">再次点击确认退出</string>
+    <string name="search_hint">搜索</string>
 
 </resources>
